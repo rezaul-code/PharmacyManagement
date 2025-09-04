@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21.0.0"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.rx.pharmacy.controller.MainController"
+      spacing="10"
+      alignment="CENTER"
+      prefWidth="600" prefHeight="400">
+
+    <Label text="Pharmacy App" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <!-- Input Fields -->
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="nameField" promptText="Medicine Name" />
+        <TextField fx:id="manufacturerField" promptText="Manufacturer" />
+        <TextField fx:id="priceField" promptText="Price" />
+        <Button fx:id="addButton" text="Add Medicine" onAction="#handleAddMedicine"/>
+    </HBox>
+
+    <!-- TableView to display medicines -->
+    <TableView fx:id="medicineTable" prefWidth="500" prefHeight="250">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="200"/>
+            <TableColumn fx:id="manufacturerColumn" text="Manufacturer" prefWidth="150"/>
+            <TableColumn fx:id="priceColumn" text="Price" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+</VBox>
